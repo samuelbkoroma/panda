@@ -15,6 +15,61 @@ import MeatBig from "@/app/assets/meatbig.jpg";
 import FruitBig from "@/app/assets/fruitbig.jpg";
 import Drinkbig from "@/app/assets/drinkbig.jpg";
 import Bucket from "@/app/assets/bucket.png";
+import { BsArrowLeft } from "react-icons/bs";
+import { BsArrowRight } from "react-icons/bs";
+
+function SampleNextArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <BsArrowRight
+      className={className}
+      style={{
+        ...style,
+        display: "block",
+        color: "#54524d",
+        width: 70,
+        height: 50,
+        position: "absolute",
+        right: "-70px",
+        top: "30%",
+        transform: "translateY(-50%)",
+        zIndex: 1,
+        cursor: "pointer",
+        padding: 10,
+        alignItems: "center",
+        transition: "background 0.3s ease",
+      }}
+      onClick={onClick}
+      onMouseEnter={(e) => (e.target.style.color = "#FF9C28")}
+      onMouseLeave={(e) => (e.target.style.color = "#54524d")}
+    />
+  );
+}
+
+function SamplePrevArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <BsArrowLeft
+      className={className}
+      style={{
+        ...style,
+        display: "block",
+        color: "#54524d",
+        width: 50,
+        height: 50,
+        position: "absolute",
+        left: "-50px",
+        top: "30%",
+        transform: "translateY(-50%)",
+        zIndex: 1,
+        cursor: "pointer",
+
+        padding: 10,
+      }}
+      onClick={onClick}
+    />
+  );
+}
 
 const TopProduct = () => {
   const settings = {
@@ -22,8 +77,10 @@ const TopProduct = () => {
     infinite: true,
     speed: 400,
     slidesToShow: 4,
-    slidesToScroll: 3,
+    slidesToScroll: 2,
     initialSlide: 4,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
   };
   return (
     <Div>
@@ -55,7 +112,7 @@ const TopProduct = () => {
         </div>
       </div>
 
-      <Slider {...settings} className="cards flex justify-center">
+      <Slider {...settings} className="tproduct_slider">
         <ProductCard
           BigImage={FruitBig}
           StarImage={star}
@@ -100,6 +157,8 @@ export default TopProduct;
 
 const Div = styled.div`
   margin-top: 100px;
+  position: relative;
+
   .online {
     font-size: 20px;
     font-family: "josefin sans", sans-serif;
@@ -111,18 +170,20 @@ const Div = styled.div`
     margin: 0 auto;
     width: 250px;
   }
-  .cards {
-    margin-left: 20px;
-    margin-right: 20px;
-    display: flex;
-  }
 
+  .tproduct_slider {
+    display: flex;
+    justify-content: center;
+
+    width: 1260px;
+    height: 792px;
+    margin: 0 auto;
+  }
   .product p {
     font-size: 18px;
     font-weight: 300;
   }
-
   .slick-slide {
-    margin: 0 20px; /* Adjust the margin for spacing */
+    width: 320px !important;
   }
 `;

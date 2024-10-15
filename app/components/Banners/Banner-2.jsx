@@ -6,7 +6,7 @@ import Image from "next/image";
 
 const SecondBanner = () => {
   return (
-    <Div background={introSlider}>
+    <Div>
       <div className="image-bounce">
         <Image
           src={FloatImage}
@@ -41,7 +41,7 @@ export default SecondBanner;
 const Div = styled.div`
   height: 600px;
   width: 100%;
-  background-image: url(${(props) => props.background.src});
+  background-image: url("@/app/assets/intro-slider2.png");
   background-size: cover;
   background-position: center;
   display: flex;

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import LazyLoad from "./Slider";
+import LazyLoad from "./HeroSlider";
 const Hero = () => {
   return (
     <Div>
