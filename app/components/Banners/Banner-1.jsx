@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const Banner = () => {
   return (
-    <Div background={slider1}>
+    <Div>
       <div className="banner1-sec">
         <h2 className="online">FROM ONLINE STORE</h2>
 
@@ -22,7 +22,7 @@ export default Banner;
 const Div = styled.div`
   height: 600px;
   width: 100%;
-  background-image: url(${(props) => props.background.src});
+  background-image: url("/assets/slider1.jpg");
   background-size: cover;
   background-position: center;
   display: flex;

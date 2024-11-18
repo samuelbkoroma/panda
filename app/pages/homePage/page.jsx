@@ -1,7 +1,7 @@
 "use client";
 
-import Navbar from "@/app/components/Navbar-1";
-import Navbars from "@/app/components/Nav-2";
+import Navbar from "@/app/components/navbars/Navbar-1";
+import Navbars from "@/app/components/navbars/Nav-2";
 import Hero from "@/app/components/Hero";
 import HeadSec from "@/app/components/HeadSec";
 import TopProduct from "@/app/components/Product/TopProduct";

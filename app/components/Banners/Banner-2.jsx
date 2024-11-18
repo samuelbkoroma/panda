@@ -1,4 +1,3 @@
-import introSlider from "@/app/assets/intro-slider2.png";
 import styled from "styled-components";
 import FloatImage from "@/app/assets/floating-image.png";
 import Brand from "@/app/assets/brand.png";
@@ -41,7 +40,7 @@ export default SecondBanner;
 const Div = styled.div`
   height: 600px;
   width: 100%;
-  background-image: url("@/app/assets/intro-slider2.png");
+  background-image: url("/assets/intro-slider2.png");
   background-size: cover;
   background-position: center;
   display: flex;
